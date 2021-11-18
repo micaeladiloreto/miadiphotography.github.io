@@ -1,0 +1,1192 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Nunito:wght@200;300;400;600;700&family=PT+Sans&family=Playfair+Display:wght@500&family=Quicksand:wght@300&family=Red+Hat+Mono:wght@300&family=Zen+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Nunito:wght@200;300;400;600;700&family=PT+Sans&family=Pinyon+Script&family=Playfair+Display:wght@500&family=Quicksand:wght@300&family=Red+Hat+Mono:wght@300&family=Zen+Antique&display=swap');
+
+:root{
+    --white: #ddd;
+    --dark: #111;
+    --darkGrey: #474b4f;
+    --lightGrey: #6b6e70;
+    --lightGreen: rgb(168,121,153);
+    --darkGreen: #61892f;
+    --transition: all 0.5s ease;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    /* font-family: 'Pinyon Script', cursive;  */
+}
+
+body{
+    line-height: 1.6;
+    background-color: #F7F7F2;
+    color: rgb(67, 68, 66);
+
+    /* color: rgba(67, 68, 66, 0.164); */
+
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* h1, h2, h3, h4, h5, h6, p{
+    margin: 15px 0;
+} */
+
+/************************************* utility classes *************************************/
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.active{
+    color: rgb(209, 161, 149)  !important;
+}
+
+
+/**************************************** nav section *****************************************/
+
+.top-nav a{
+    color: #fff;
+}
+
+.brand-and-navBtn{
+    background: var(--dark);
+    position: relative;
+    z-index: 999;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 15px 25px;
+    color: var(--white);
+    
+}
+
+.brand-name{
+    letter-spacing: 5px;
+    width: 400px;
+    font-size: 1.4rem;
+}
+
+/* .logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline;
+    vertical-align: middle;
+} */
+
+.navBtn{
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.navBtn:hover{
+    background: #fff;
+    color: rgb(67, 68, 66);
+    transition: var(--transition);
+}
+
+.top-nav{
+    background: var(--dark);
+    transform: translateY(-600px);
+    transition: var(--transition);
+}
+
+.showNav{
+    transform: translateY(0);
+}
+
+.top-nav ul li{
+    padding: 10px 0;
+}
+
+.top-nav ul a{
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+
+.top-nav ul a::after{
+    content: "";
+    height: 2px;
+    background: rgb(209, 161, 149);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: var(--transition);
+}
+
+.top-nav ul a:hover::after{
+    width: 100px;
+}
+
+/*************************************** header section ***************************************/
+.parallax{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/DSC_2440.JPG") center/cover no-repeat;
+    color: #fff;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    /* min-height: 100vh; */
+    position: relative;
+}
+
+.about{
+
+    margin: 0 auto;
+    position: absolute;              
+    top: 50%;                         
+    left: 50%;
+    transform: translate(-50%, -50%) 
+      
+}
+
+.about-content img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-content h3{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 100;
+    width: 500px;
+    margin: 35px auto;
+    text-align: center;
+}
+
+blockquote{
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0.9;
+    /* width: 60vw; */
+    margin: 45px auto 15px auto;
+    text-align: center;
+}
+
+.social-icons{
+    width: 200px;
+    margin: 40px auto 0 auto;
+}
+
+.social-icons ul a{
+    color: #fff;
+    font-size: 30px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.social-icons ul{
+    display: flex;
+    justify-content:space-around;
+}
+
+.social-icons ul a:hover{
+    background: rgba(235, 184, 164, 0.301);
+    border-color: rgb(235,184,164);
+}
+
+/******************************************rectangle section ************************************/
+
+.rectangle-section{
+    margin: 40px 0;
+    background-color: #F7F7F2;
+    /* height: 100vh; */
+    /* width: 100vw; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative; */
+
+}
+
+.rectangle-section .container div{
+    /* padding: 1rem; */
+    margin: 20px 0;
+    /* margin: 0 auto;
+    max-width: 2000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(184, 78, 51, 0.123); */
+}
+
+.rectangle-content{
+    text-align: center;
+    /* padding: 25px 0; */
+    /* background: rgba(209, 161, 149, 0.267); */
+    color: rgb(67, 68, 66);
+
+     /* margin: 0; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding: 5rem;  */
+}
+
+ .rect-bigtext{
+    text-align: center;
+    margin: 5%;
+    max-width: 500px;
+   
+}
+
+.rect-smalltext{
+    text-align: center;
+    margin: 5%;
+    max-width: 500px;
+}
+
+.bigtext{
+    padding: 20px;
+    font-size: 4rem;
+    line-height: 4rem;
+    
+}
+
+.bigtext span{
+   font-size: 3rem;
+   opacity: 0.7;
+}
+
+.meandmywork{
+    font-size: 4rem;
+}
+
+.portrait{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    margin: 0 auto;
+}
+
+
+.smalltext{
+    width: 500px;
+    line-height: 2rem;
+    padding: 25px 0;
+}
+
+#cursive2{
+    font-family: 'Pinyon Script', cursive;
+    font-weight:lighter;
+    letter-spacing: 10px;
+    line-height: 5rem;
+}
+
+@media screen and (min-width:971px){
+    .smalltext{
+        max-width: 390px;
+        padding-top: 10%;
+    }
+
+    .bigtext{
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .bigtext{
+        max-width: 600px;
+    }
+
+    .smalltext{
+        max-width: 600px;
+        padding-top: 10%;   
+    }
+}
+
+
+/* small screen */
+
+  @media screen and (max-width: 970px){
+      .rectangle-content{
+          flex-direction: column;
+      }
+
+      .bigtext{
+        width: 390px;
+        line-height: 5rem;
+      } 
+
+      .smalltext{
+          max-width: 400px;
+          padding-top: 10%;
+        }
+  }
+
+
+/***************************************** greeting section ***************************************/
+.greeting-section{
+    background-color: #F7F7F2;
+    /* margin:5%; */
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 10px;
+    color: rgb(67, 68, 66);
+
+}
+
+.greeting-container{
+    width:650px;
+    /* margin: 0 auto; */
+}
+
+.greeting-section .container{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content:space-evenly;
+    align-items: center;
+    vertical-align: middle;
+    /* width: 100%; */
+    max-width: 1500px;
+    /* padding: 100px 30px; */
+    /* margin: 5%; */
+}   
+
+.greeting-right{
+    width: 500px;
+    padding: 25px 0;
+}
+
+.greeting-right img{
+    /* background-image: url(images/icons8-flowers-64.png); */
+   width:60px;
+   height: 100px;
+   align-items: center;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.greeting-right h4{
+    letter-spacing: 0.07rem;
+    line-height: 2.3rem;
+}
+
+.greeting-text{
+    font-size: 6rem;
+    line-height: 8rem;
+    margin: 0 auto;
+    max-width: 500px;
+    overflow: hidden;
+    padding: 25px 0;
+
+}
+
+/************************************** media queries ********************************/
+
+@media screen and (min-width:501px){
+    .greeting-text{
+        font-size: 3.5rem;
+    }
+
+    .greeting-right{
+        font-size: 0.75rem;   
+    }
+}
+
+@media screen and (min-width:700px){
+    .greeting-text{
+        font-size: 4rem;
+        margin-right: 2%;
+    }
+
+    .greeting-right{
+        font-size: 0.8rem; 
+        margin-left: 2%;   
+    }
+}
+
+@media screen and (min-width:990px){
+    .greeting-text{
+        font-size: 6rem;
+    line-height: 8rem;
+    margin: 0 auto;
+    max-width: 500px;
+    overflow: hidden;
+    padding: 25px 0;
+    }
+
+    .greeting-right{
+        font-size: 1rem;
+        width: 500px;
+    line-height: 2rem;
+    padding: 25px 0;
+    letter-spacing: 0.07rem;   
+    }
+}
+
+/* small screen */
+
+@media screen and (max-width: 600px){
+    .greeting-section .container{
+        flex-direction: column;
+    }
+
+    .greeting-text{
+        text-align: center;
+    }
+
+    .greeting-text {
+        font-size: 4rem;
+        max-width: 400px;
+    }
+
+    .greeting-right{
+        text-align: center;
+        font-size: 0.8rem;
+        max-width: 350px;
+    }
+}
+
+
+/*****************************************photo genres section *********************************/
+
+.genres{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.genres-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-gap: 1rem; */
+    grid-auto-flow:dense;
+    /* padding: 1rem; */
+}
+
+.genre{
+    background-size: cover;
+}
+
+.genre:after{
+    content: '';
+    display: block;
+    padding-top: calc(100% / (16/10));
+}
+
+.genre-container{
+    position: relative;
+    text-align: center;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+}
+
+.shade{
+    width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.411);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.shade:hover{
+    background: none;
+    transition: var(--transition);
+
+}
+
+
+
+
+/* *************************************mountains section ************************************* */
+
+.parallax2{
+    background-image: url(images/DSC_1893.JPG);
+
+
+    /* background-size:cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    width: 100%; */
+    min-height: 100vh;
+    /* background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/DSC_2440.JPG") center/cover no-repeat; */
+    color: #fff;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/****************************************girls section ************************************* */
+
+.parallax3{
+    background-image: url(images/DSC_1689\ \(1\).JPG);
+
+    /* background-size:cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    width: 100%; */
+    min-height: 100vh;
+    color: #fff;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/***************************************** instagram section ***********************************/
+.section-two{
+    margin: 40px 0;
+    color: rgb(67, 68, 66);
+
+    /* color: rgba(67, 68, 66, 0.274); */
+
+}
+
+.section-two h2{
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.2rem;
+}
+
+
+.section-two span{
+    color: var(--darkGrey);
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.insta-imgs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.insta-imgs > div{
+    position: relative;
+}
+
+.icon-overlay{
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    background:rgba(235, 184, 164, 0.315);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.insta-imgs > div:hover .icon-overlay{
+    opacity: 1;
+}
+
+#follow h2{
+    font-size: 15px;
+}
+
+/********************************* gallery.html ***********************************/
+
+/* section three */
+.section-three{
+    margin: 40px 0;
+}
+
+.back-to-gallery{
+    /* padding: 10px;
+    background-color: rgba(209, 161, 149, 0.267);
+    font-size: 1rem;
+    border-radius: 20px; */
+    padding: 10px;
+    background-color: rgba(209, 161, 149, 0.267);
+    cursor: pointer;
+    /* letter-spacing: 0.1rem; */
+    border-radius: 20px;
+}
+
+.back-to-gallery-btn-bottom a{
+    color: rgb(67, 68, 66);
+}
+
+.back-to-gallery-btn-top a{
+    color: rgb(67, 68, 66);
+}
+
+.left-arrow{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+
+.back-to-gallery-btn-bottom a:hover{
+    color: rgba(67, 68, 66, 0.459);
+}
+
+.back-to-gallery-btn-top a:hover{
+    color: rgba(67, 68, 66, 0.459);
+}
+
+.back-to-gallery-btn-bottom{
+    padding-top: 20px;
+}
+
+.back-to-gallery-btn-top{
+    padding-bottom: 20px;
+}
+
+.couples-gallery{
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.weddings-gallery{
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.boudoir-gallery{
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.maternity-gallery{
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.single-img{
+    position: relative;
+    margin: 10px;
+}
+
+/******************************* packages.html *************************************/
+
+/* section four */
+.packages-section{
+    margin: 0 auto;
+    padding: 1rem;
+    color: rgb(67, 68, 66);
+    text-align: center;
+    background-color: #F7F7F2;
+}
+
+hr{
+    background-color: rgb(67, 68, 66);
+    margin-bottom: 5%;
+}
+
+.title{
+    font-size: 2rem;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.holdingcontainer1{
+    /* width: 100%; */
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-top: 4rem;
+    /* background-color: rgba(67, 68, 66, 0.61); */
+    /* color: white; */
+
+}
+
+.holdingcontainer2{
+    /* width: 100%; */
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1rem;
+    /* background-color: rgba(67, 68, 66, 0.61); */
+    /* color: white; */
+
+}
+
+.internalcontainer{
+    flex: 1;
+    background: rgba(209, 161, 149, 0.267);
+    /* font-size: 12px; */
+    margin: 10px;
+    /* border-radius: 10px; */
+}
+
+.container-text{
+    padding: 30px 10px;
+}
+
+.container-text h5{
+    font-weight: lighter;
+    line-height: 2rem;
+}
+
+/* .dasimages{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    padding: 25px;
+} */
+
+span{
+font-weight: bold;
+letter-spacing: 0.1rem;
+font-size: 1.1rem;
+}
+
+#cursive{
+    font-family: 'Pinyon Script', cursive;
+    font-weight:normal;
+    letter-spacing: 2px;
+
+}
+
+.container-text h1{
+    font-size: 1.3rem;
+}
+
+.ala-carte{
+    margin: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width:930px){
+    .holdingcontainer2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .holdingcontainer1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:545px){
+    .holdingcontainer1{
+        flex-direction: column;
+    }
+
+    .holdingcontainer2{
+        flex-direction: column;
+
+    }
+}
+
+@media screen and (max-width: 710px){
+    .container-text h1{
+        font-size: 1.3rem;
+    }
+
+}
+
+/******************************** contact.html **************************************/
+
+/* section five */
+.section-five{
+    margin: 40px 0;
+    background-color: #F7F7F2;
+}
+
+.section-five .container div{
+    margin: 20px 0;
+}
+
+ .contact-top{
+    text-align: center;
+}
+
+.contact-top h3{
+    font-size: 28px;
+}
+
+.contact-top p{
+    font-weight: 300;
+    width: 70%;
+    margin: 0 auto;
+} 
+
+.contact-middle div{
+    text-align: center;
+    padding: 25px 0;
+    background: rgba(209, 161, 149, 0.267);
+    color: rgb(67, 68, 66);
+}
+
+.contact-middle div span{
+    display: block;
+}
+
+.contact-icon{
+    font-size: 30px;
+}
+
+.contact-middle div span:nth-child(2){
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-middle div p{
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.contact-bottom{
+    margin-top: 50px!important;
+}
+
+ .form input[type="text"], .form input[type="email"], .form textarea{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 1px solid rgba(17, 17, 17, 0.384);
+    background-color:#F7F7F2;
+    outline: none;
+    border-radius: 5px;
+}
+
+.contact-bottom .form{
+    padding: 0 20px;
+}
+
+.btn{
+    padding: 10px;
+    letter-spacing: 1px;
+    background-color: rgba(209, 161, 149, 0.267);
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.btn:hover{
+    color: rgba(67, 68, 66, 0.459);
+}
+
+.status{
+    display: none;
+} 
+
+/******************************* footer section ************************************/
+.footer{
+    background: var(--dark);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-img{
+    height: 90px;
+    width: 80px;
+    padding: 2%;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer-container > div{
+    margin: 20px 0;
+}
+
+.footer-container h2{
+    color: rgba(209, 161, 149, 0.747);
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 7px;
+    font-weight: lighter;
+}
+
+.footer-container p{
+    opacity: 0.7;
+    margin-top: 3.5rem;
+    /* margin: 0 auto; */
+
+}
+ .contacts-foot{
+     font-size: 0.8rem;
+    text-align: center; 
+}
+
+
+.footer > p{
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+    
+
+}
+
+/******************************* media queries *********************************/
+@media screen and (min-width:480px){
+    .couples-gallery{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .weddings-gallery{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .boudoir-gallery{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .maternity-gallery{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 678px){
+/* section five */
+.contact-middle{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
+    grid-column-gap: 20px;
+}
+}
+
+@media screen and (min-width: 800px){
+    /* section two */
+.insta-imgs{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* section three */
+.couples-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.weddings-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.boudoir-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.maternity-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+}
+
+@media screen and (min-width: 992px){
+    /* header & footer */
+    .nav-section{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navBtn{
+        display: none;
+    }
+
+    .brand-and-navBtn{
+        flex: 10% 0 10%;
+        background: none;
+    }
+
+    .top-nav{
+        flex: 0 1 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        transition: transform 0s ease;
+        transform: translateY(0);
+        background: transparent;
+    }
+
+    .top-nav ul{
+        display: flex;
+    }
+
+    .top-nav ul li{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    /* section five */
+    .contact-middle{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 40px;
+    }
+
+}
+
+@media screen and (min-width: 1000px){
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .footer-container > div{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* section three */
+    .couples-gallery{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .weddings-gallery{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .boudoir-gallery{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .maternity-gallery{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/****************** extra small screen *****************/
+
+@media screen and (max-width: 500px){
+ 
+    .about-content h3{
+        width: 100%;
+    }
+
+    .about-content blockquote{
+        font-size: 16px;
+        width: 100%;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    h3{
+        font-size: 20px!important;
+    }
+
+    .btn{
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .couples-gallery{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .weddings-gallery{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .boudoir-gallery{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .maternity-gallery{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .holdingcontainer1{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .holdingcontainer2{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+
+}
+
+
