@@ -63,6 +63,8 @@ body.hidden-scroll {
     width: 100%;
     display: none; }
     .sl-wrapper .sl-navigation button {
+      overflow: hidden;
+
       position: fixed;
       top: 50%;
       margin-top: -22px;
