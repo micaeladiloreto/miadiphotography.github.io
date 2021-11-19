@@ -37,6 +37,7 @@ img{
 
 ul li{
     list-style: none;
+    overflow: hidden;
 }
 
 a{
