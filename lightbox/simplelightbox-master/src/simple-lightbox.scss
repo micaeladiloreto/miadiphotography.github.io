@@ -78,6 +78,7 @@ body.hidden-scroll {
         font-family: $sl-font-family;
         color: $sl-navigation-color;
         font-size: $sl-close-fontsize;
+        overflow: hidden;
 
         &:focus {
             //outline: none;
@@ -112,11 +113,13 @@ body.hidden-scroll {
             &.sl-next {
                 right: 5px;
                 font-size: $sl-arrow-fontsize-small;
+                overflow: hidden;
             }
 
             &.sl-prev {
                 left: 5px;
                 font-size: $sl-arrow-fontsize-small;
+                overflow: hidden;
             }
 
             &:focus {
