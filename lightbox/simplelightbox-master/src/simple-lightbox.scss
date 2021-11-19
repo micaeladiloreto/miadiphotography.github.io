@@ -110,16 +110,15 @@ body.hidden-scroll {
             z-index: 10060;
             font-family: $sl-font-family;
             color: $sl-navigation-color;
+            overflow: hidden;
             &.sl-next {
                 right: 5px;
                 font-size: $sl-arrow-fontsize-small;
-                overflow: hidden;
             }
 
             &.sl-prev {
                 left: 5px;
                 font-size: $sl-arrow-fontsize-small;
-                overflow: hidden;
             }
 
             &:focus {
