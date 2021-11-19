@@ -7,10 +7,6 @@
 body.hidden-scroll {
   overflow: hidden; }
 
-  *{
-    overflow-y: hidden;
-  }
-
 .sl-overlay {
   position: fixed;
   left: 0;
@@ -40,6 +36,8 @@ body.hidden-scroll {
     .sl-wrapper button:hover {
       opacity: 0.7; }
   .sl-wrapper .sl-close {
+    overflow: hidden;
+
     display: none;
     position: fixed;
     right: 30px;
