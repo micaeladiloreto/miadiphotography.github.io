@@ -123,6 +123,8 @@ a{
 
 .showNav{
     transform: translateY(0);
+    position: relative;
+    z-index: 2;
 }
 
 .top-nav ul li{
